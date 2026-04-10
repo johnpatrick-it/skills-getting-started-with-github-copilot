@@ -108,7 +108,7 @@ def signup_for_activity(activity_name: str, email: str):
     return {"message": f"Signed up {email} for {activity_name}"}
 
 
-@app.delete("/activities/{activity_name}/signup")
+@app.delete("/activities/{activity_name}/participants/{email}")
 def unregister_from_activity(activity_name: str, email: str):
     """Unregister a student from an activity."""
     if activity_name not in activities:
